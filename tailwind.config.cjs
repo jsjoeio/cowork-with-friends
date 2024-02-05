@@ -7,6 +7,7 @@ module.exports = {
         black: "#100F0F",
         pink: "#EF9CCB",
         ["light-green"]: "#B0C652",
+        ["dark-green"]: "#2C3505",
       },
       animation: {
         marquee: "marquee 25s linear infinite",
