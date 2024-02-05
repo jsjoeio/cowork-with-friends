@@ -8,12 +8,12 @@ module.exports = {
         pink: "#EF9CCB",
       },
       animation: {
-        marquee: "marquee 30s linear infinite",
+        marquee: "marquee 25s linear infinite",
       },
       keyframes: {
         marquee: {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-100%)" },
+          "0%": { transform: "translate(0%)" },
+          to: { transform: "translate(-100%)" },
         },
       },
     },
