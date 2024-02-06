@@ -42,6 +42,82 @@ function VisualSection() {
   )
 }
 
+function SecondSection() {
+  return (
+    <div className="text-center bg-[#083800] text-[42px] font-bold family-Inter h-full">
+      <div className="container mx-auto px-[19px] xl:px-0">
+        <div className="pt-[72px] pb-[52px] tracking-[-1.56px] leading-[100%]">
+          <h1 className="text-[#7CC770]">That one simple trick</h1>
+          <h2 className="text-white">for your health &amp; happiness</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[32px] pb-[88px]">
+          <a
+            href="https://lifehacker.com/living-near-happy-friends-has-the-greatest-effect-on-yo-1736728928"
+            target="_blank"
+          >
+            <div className="min-h-[220px] lg:min-h-[304px] flex flex-col text-left bg-white rounded-[24px] p-[24px] text-[24px] font-bold leading-[120%] tracking-[-0.48px]">
+              {" "}
+              “Living near happy friends has the greatest effect on your own
+              happiness”{" "}
+              <div className="mt-auto">
+                <img
+                  src="/assets/Property 1_image 7-746e0784.svg"
+                  alt="lifehacker"
+                />
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.theatlantic.com/family/archive/2023/03/neighbors-friendship-happiness/673352/"
+            target="_blank"
+          >
+            <div className="min-h-[220px] lg:min-h-[304px] flex flex-col text-left bg-white rounded-[24px] p-[24px] text-[24px] font-bold leading-[120%] tracking-[-0.48px]">
+              {" "}
+              “Live closer to your friends”{" "}
+              <div className="mt-auto">
+                <img
+                  src="/assets/Property 1_image 8-ed1409ac.svg"
+                  alt="the atlantic"
+                />
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://annehelen.substack.com/p/youd-be-happier-living-closer-to"
+            target="_blank"
+          >
+            <div className="min-h-[220px] lg:min-h-[304px] flex flex-col text-left bg-white rounded-[24px] p-[24px] text-[24px] font-bold leading-[120%] tracking-[-0.48px]">
+              {" "}
+              “You'd be happier living closer to friends. Why don't you?”{" "}
+              <div className="mt-auto">
+                <img
+                  src="/assets/Property 1_image 9-55a90c60.svg"
+                  alt="culture study"
+                />
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.bloomberg.com/news/articles/2023-07-15/it-s-time-we-design-a-15-minute-city-for-friendship"
+            target="_blank"
+          >
+            <div className="min-h-[220px] lg:min-h-[304px] flex flex-col text-left bg-white rounded-[24px] p-[24px] text-[24px] font-bold leading-[120%] tracking-[-0.48px]">
+              {" "}
+              “Living close to friends matters”{" "}
+              <div className="mt-auto">
+                <img
+                  src="/assets/New_Bloomberg_Logo-5389c6ca.svg"
+                  alt="bloomberg"
+                />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export function TopSection() {
   return (
     <div className="grow">
@@ -52,77 +128,6 @@ export function TopSection() {
           <div className="grid grid-cols-1 xl:grid-cols-2">
             <Hero />
             <VisualSection />
-          </div>
-        </div>
-        <div className="text-center bg-[#083800] text-[42px] font-bold family-Inter h-full">
-          <div className="container mx-auto px-[19px] xl:px-0">
-            <div className="pt-[72px] pb-[52px] tracking-[-1.56px] leading-[100%]">
-              <h1 className="text-[#7CC770]">That one simple trick</h1>
-              <h2 className="text-white">for your health &amp; happiness</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[32px] pb-[88px]">
-              <a
-                href="https://lifehacker.com/living-near-happy-friends-has-the-greatest-effect-on-yo-1736728928"
-                target="_blank"
-              >
-                <div className="min-h-[220px] lg:min-h-[304px] flex flex-col text-left bg-white rounded-[24px] p-[24px] text-[24px] font-bold leading-[120%] tracking-[-0.48px]">
-                  {" "}
-                  “Living near happy friends has the greatest effect on your own
-                  happiness”{" "}
-                  <div className="mt-auto">
-                    <img
-                      src="/assets/Property 1_image 7-746e0784.svg"
-                      alt="lifehacker"
-                    />
-                  </div>
-                </div>
-              </a>
-              <a
-                href="https://www.theatlantic.com/family/archive/2023/03/neighbors-friendship-happiness/673352/"
-                target="_blank"
-              >
-                <div className="min-h-[220px] lg:min-h-[304px] flex flex-col text-left bg-white rounded-[24px] p-[24px] text-[24px] font-bold leading-[120%] tracking-[-0.48px]">
-                  {" "}
-                  “Live closer to your friends”{" "}
-                  <div className="mt-auto">
-                    <img
-                      src="/assets/Property 1_image 8-ed1409ac.svg"
-                      alt="the atlantic"
-                    />
-                  </div>
-                </div>
-              </a>
-              <a
-                href="https://annehelen.substack.com/p/youd-be-happier-living-closer-to"
-                target="_blank"
-              >
-                <div className="min-h-[220px] lg:min-h-[304px] flex flex-col text-left bg-white rounded-[24px] p-[24px] text-[24px] font-bold leading-[120%] tracking-[-0.48px]">
-                  {" "}
-                  “You'd be happier living closer to friends. Why don't you?”{" "}
-                  <div className="mt-auto">
-                    <img
-                      src="/assets/Property 1_image 9-55a90c60.svg"
-                      alt="culture study"
-                    />
-                  </div>
-                </div>
-              </a>
-              <a
-                href="https://www.bloomberg.com/news/articles/2023-07-15/it-s-time-we-design-a-15-minute-city-for-friendship"
-                target="_blank"
-              >
-                <div className="min-h-[220px] lg:min-h-[304px] flex flex-col text-left bg-white rounded-[24px] p-[24px] text-[24px] font-bold leading-[120%] tracking-[-0.48px]">
-                  {" "}
-                  “Living close to friends matters”{" "}
-                  <div className="mt-auto">
-                    <img
-                      src="/assets/New_Bloomberg_Logo-5389c6ca.svg"
-                      alt="bloomberg"
-                    />
-                  </div>
-                </div>
-              </a>
-            </div>
           </div>
         </div>
       </main>
