@@ -4,6 +4,7 @@ import Button from "../components/Button.astro"
 import { Banner } from "../components/Banner.tsx"
 import { LogoWithContainer } from "../components/LogoWithContainer.tsx"
 import { TopSection } from "../components/TopSection.tsx"
+import { MainContainer } from "../components/MainContainer.tsx"
 import { Hero } from "../components/Hero.tsx"
 
 // Full Astro Component Syntax:
@@ -20,16 +21,8 @@ import { Hero } from "../components/Hero.tsx"
   </head>
 
   <body>
-    <Banner />
-    <TopSection>
-      <LogoWithContainer />
-      <Hero />
-    </TopSection>
-    <div class="grid place-items-center h-screen content-center">
-      <Button>Tailwind Button in Astro!</Button>
-      <a href="/markdown-page" class="p-4 underline"
-        >Markdown is also supported...</a
-      >
-    </div>
+    <MainContainer>
+      <TopSection />
+    </MainContainer>
   </body>
 </html>
