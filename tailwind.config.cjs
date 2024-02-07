@@ -8,6 +8,8 @@ module.exports = {
         pink: "#EF9CCB",
         ["light-green"]: "#B0C652",
         ["dark-green"]: "#2C3505",
+        ["light-orange"]: "#FFAA74",
+        ["dark-orange"]: "#AC5924",
       },
       animation: {
         marquee: "marquee 25s linear infinite",
