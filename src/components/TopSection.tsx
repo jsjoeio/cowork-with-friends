@@ -25,14 +25,14 @@ function VisualSection() {
           <div className="flex flex-row items-center justify-center mt-6">
             <CalIcon />
             <div className="ml-2">
-              <p className="font-semibold">Wednesday, February 6</p>
-              <p>10:00 AM - 1:00 PM</p>
+              <p className="font-semibold">Wednesdays</p>
+              <p>2-3hrs in the mornin'</p>
             </div>
           </div>
           <div className="flex flex-row items-center justify-center mt-6">
             <MapIcon />
             <div className="ml-2">
-              <p className="font-semibold">85253</p>
+              <p className="font-semibold">South Scottsdale</p>
               <p>a quiet coffee shop</p>
             </div>
           </div>
