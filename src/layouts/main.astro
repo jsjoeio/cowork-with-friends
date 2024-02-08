@@ -1,15 +1,47 @@
 ---
-const { content } = Astro.props;
+import { SEO } from "astro-seo"
+const { content, title = "" } = Astro.props
+
+console.log(content, "content")
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString()
+const staticOgImage = new URL("/cwf-og-image.png", Astro.site).toString()
+const _title = content?.title || title
+const makeTitle = _title
+  ? _title + " | " + "Cowork With Friends"
+  : "Cowork With Friends - making remote work less lonely"
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{content.title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{makeTitle}</title>
+
+    <SEO
+      title={makeTitle}
+      description="The best thing you can do for your loneliness"
+      canonical={canonicalURL}
+      twitter={{
+        creator: "@jsjoeio",
+        site: "@jsjoeio",
+        card: "summary_large_image",
+      }}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: `Cowork With Friends - making remote work less lonely`,
+          image: staticOgImage,
+        },
+        image: {
+          alt: "Cowork With Friends open graph image",
+        },
+      }}
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>

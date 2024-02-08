@@ -3,24 +3,17 @@
 import { TopSection } from "../components/TopSection.tsx"
 import { MainContainer } from "../components/MainContainer.tsx"
 import { Footer } from "../components/Footer.tsx"
+import Layout from "../layouts/main.astro"
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro + TailwindCSS</title>
-  </head>
-
+<Layout title="">
   <body>
     <MainContainer>
       <TopSection />
       <Footer />
     </MainContainer>
   </body>
-</html>
+</Layout>
