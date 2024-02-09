@@ -10,7 +10,7 @@ function Button() {
         >
           <span className="relative flex gap-x-2">
             {/**/}
-            <span className="text-white">Let's do it</span>
+            <span className="text-white">Find a group</span>
           </span>
         </a>
         <span className="block absolute z-[-2] w-full h-full bottom-[-4px] right-[-4px] rounded-full bg-dark-green" />
