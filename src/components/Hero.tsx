@@ -24,7 +24,7 @@ export function Hero() {
     <div>
       <h1 className="text-dark-green text-[52px] text-center xl:text-left xl:text-[80px] font-black tracking-tight leading-[90%]">
         {" "}
-        Cowork wtih friends <span className="text-white">near you</span>
+        Cowork with friends <span className="text-white">near you</span>
       </h1>
       <p className="relative text-dark-green text-center text-2xl xl:text-3xl xl:text-left max-w-full xl:max-w-[520px] font-bold leading-[115%] mt-8 xl:mt-10 mb-8 xl:mb-11">
         {" "}
