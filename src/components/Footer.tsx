@@ -11,14 +11,11 @@ export function Footer() {
             <div className="order-1 xl:order-2 text-center space-x-2">
               <div>Wanna bring it to your city?</div>
               <div>
-                {" "}
-                We’d love to hear from you:{" "}
-                <a
-                  href="mailto:hello@coworkwithfriends.com"
-                  className="underline"
-                >
-                  hello@coworkwithfriends.com
-                </a>
+                Read our{" "}
+                <a href="/starting-new-group" className="underline">
+                  Starting a New Group
+                </a>{" "}
+                guide
               </div>
             </div>
             <div className="order-2 xl:order-3 text-right flex xl:block flex-col items-center">
