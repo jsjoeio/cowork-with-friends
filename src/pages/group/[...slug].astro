@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content"
+
+export async function getStaticPaths() {
+  const groupEntries = await getCollection("groups")
+  return groupEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<div>
+  <h1>{entry.data.name}</h1>
+  <Content />
+</div>
