@@ -7,7 +7,7 @@ const groupsCollection = defineCollection({
     description: z.string(), // A group of tech professionals who cowork in Scottsdale, AZ
     image: z.object({
       // Cover image for the group
-      url: z.string().url(),
+      url: z.string(),
       alt: z.string(),
     }),
     acceptingMembers: z.boolean(), // Whether the group is accepting new members
