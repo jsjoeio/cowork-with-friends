@@ -3,8 +3,7 @@ function Button() {
     <div>
       <div className="inline-block relative z-[2] w-full xl:w-auto xl:w-[300px]">
         <a
-          href="https://forms.reform.app/WR4x5f/cwf-signup-form/41rn5c"
-          target="_blank"
+          href="/groups"
           className="border-2 border-light-green relative z-2 w-full text-[18px] z-1 font-bold rounded-full flex justify-center text-center whitespace-nowrap"
           style={{ padding: "18px 40px" }}
         >
