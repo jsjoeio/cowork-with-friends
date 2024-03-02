@@ -1,0 +1,59 @@
+---
+import { SEO } from "astro-seo"
+import { SmallLogoWithContainer } from "../components/SmallLogoWithContainer.tsx"
+
+const { content, title = "" } = Astro.props
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString()
+const staticOgImage = new URL("/cwf-og-image.png", Astro.site).toString()
+const _title = content?.title || title
+const makeTitle = _title
+  ? _title + " | " + "Cowork With Friends"
+  : "Cowork With Friends - making remote work less lonely"
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{makeTitle}</title>
+
+    <SEO
+      title={makeTitle}
+      description="The best thing you can do for your loneliness"
+      canonical={canonicalURL}
+      twitter={{
+        creator: "@jsjoeio",
+        site: "@jsjoeio",
+        card: "summary_large_image",
+      }}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: `Cowork With Friends - making remote work less lonely`,
+          image: staticOgImage,
+        },
+        image: {
+          alt: "Cowork With Friends open graph image",
+        },
+      }}
+    />
+    <script
+      type="text/partytown"
+      src="https://beamanalytics.b-cdn.net/beam.min.js"
+      data-token="a57899e3-9104-4146-b0c9-1c77e4b91387"
+      async></script>
+  </head>
+  <body class="bg-light-green px-6 py-6 xl:py-16">
+    <div class="mx-auto">
+      <SmallLogoWithContainer />
+      <slot />
+    </div>
+  </body>
+</html>
