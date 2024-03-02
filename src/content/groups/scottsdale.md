@@ -12,6 +12,8 @@ organizerEmail: "hello@coworkwithfriends.com"
 organizerImage:
   url: "https://github.com/jsjoeio.png"
   alt: "Headshot of Joe Previte"
+joinGroupText: "Join Group"
+joinGroupUrl: "https://forms.reform.app/WR4x5f/cwf-signup-form/41rn5c?609b8384-27d1-4a6d-b52e-86598005565e=Scottsdale"
 ---
 
 # About

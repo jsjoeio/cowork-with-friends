@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo"
+import { JoinGroup } from "../components/JoinGroup.tsx"
 
 const { content, title = "", entry } = Astro.props
 
@@ -90,6 +91,12 @@ const makeTitle = _title
             />
             <p class="ml-2">{entry.data.organizerName}</p>
           </div>
+        </div>
+        <div class="mt-6">
+          <JoinGroup
+            link={entry.data.joinGroupUrl}
+            text={entry.data.joinGroupText}
+          />
         </div>
       </div>
     </div>

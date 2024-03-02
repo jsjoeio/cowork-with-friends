@@ -20,6 +20,8 @@ const groupsCollection = defineCollection({
       url: z.string().url(),
       alt: z.string(),
     }),
+    joinGroupText: z.string(), // The text to display on the "Join Group" button
+    joinGroupUrl: z.string().url(), // The URL to redirect to when the "Join Group" button is clicked
   }),
 })
 
