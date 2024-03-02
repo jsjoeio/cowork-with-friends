@@ -11,6 +11,7 @@ const groupsCollection = defineCollection({
       alt: z.string(),
     }),
     acceptingMembers: z.boolean(), // Whether the group is accepting new members
+    location: z.string(), // The location of the group i.e. "Scottsdale, AZ"
     isNew: z.boolean(), // Whether or not to show "New group" on /groups page
     organizerName: z.string(), // The name of the organizer i.e. "John Doe"
     organizerEmail: z.string().email(), // The email of the organizer

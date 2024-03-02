@@ -1,13 +1,18 @@
 ---
 import { getCollection } from "astro:content"
-import GuideLayout from "../layouts/guide.astro"
-const pageTitle = "My Astro Learning Blog"
+import Normal from "../layouts/normal.astro"
+import {GroupCard} from "../components/GroupCard.tsx"
+
+const pageTitle = "Groups"
 const allGroups = await getCollection("groups")
 ---
 
-<GuideLayout pageTitle={pageTitle}>
-  <p>This is where I will post about my journey learning Astro.</p>
-  <ul>
-    {allGroups.map((group) => <h3>{group.data.name}</h3>)}
-  </ul>
-</GuideLayout>
+<Normal title={pageTitle}>
+  <div class="flex flex-col justify-center items-center">
+    <h1 class="font-extrabold text-4xl mb-2">Coworking Groups</h1>
+    <p class="mb-16 text-xl">Check out our active coworking groups below!</p>
+    <ul>
+      {allGroups.map((group) => <GroupCard {...group.data} slug={group.slug} /></h3>)}
+    </ul>
+  </div>
+</Normal>
