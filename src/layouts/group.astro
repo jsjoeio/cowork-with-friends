@@ -1,0 +1,101 @@
+---
+import { SEO } from "astro-seo"
+
+const { content, title = "", entry } = Astro.props
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString()
+const staticOgImage = new URL("/cwf-og-image.png", Astro.site).toString()
+const _title = content?.title || title
+const makeTitle = _title
+  ? _title + " | " + "Cowork With Friends"
+  : "Cowork With Friends - making remote work less lonely"
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{makeTitle}</title>
+
+    <SEO
+      title={makeTitle}
+      description="The best thing you can do for your loneliness"
+      canonical={canonicalURL}
+      twitter={{
+        creator: "@jsjoeio",
+        site: "@jsjoeio",
+        card: "summary_large_image",
+      }}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: `Cowork With Friends - making remote work less lonely`,
+          image: staticOgImage,
+        },
+        image: {
+          alt: "Cowork With Friends open graph image",
+        },
+      }}
+    />
+    <script
+      type="text/partytown"
+      src="https://beamanalytics.b-cdn.net/beam.min.js"
+      data-token="a57899e3-9104-4146-b0c9-1c77e4b91387"
+      async></script>
+  </head>
+  <body class="bg-light-green px-6 py-6 xl:py-16 xl:max-w-[1200px] mx-auto">
+    <nav class="">
+      <div class="container mx-auto flex items-center justify-between">
+        <a href="/">
+          <img
+            class="w-24 h-24 xl:w-32 xl:h-32"
+            src="/assets/cwf-logo.svg"
+            alt="Cowork with friends logo with two emojis"
+          />
+        </a>
+
+        <!-- Navigation Links -->
+        <div class="hidden md:flex space-x-4">
+          <a href="/groups" class="font-semibold">Back to Groups</a>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="py-4 rounded-[24px] flex flex-col items-stretch justify-between xl:flex-row"
+    >
+      <div id="group-card-left" class="mb-4 xl:mb-0">
+        <img
+          class="mx-auto block xl:max-w-[600px] rounded-[24px]"
+          src={entry.data.image.url}
+          alt={entry.data.image.alt}
+        />
+      </div>
+      <div id="group-card-right" class="xl:ml-12">
+        <h1 class="my-2 font-bold text-4xl">{entry.data.name}</h1>
+        <p class="font-normal mt-4 uppercase text-2xl">{entry.data.location}</p>
+        <div>
+          <p class="mt-6 text-lg font-bold">Organizer</p>
+          <div class="flex flex-row items-center mt-2">
+            <img
+              class="w-12 h-12 rounded-full"
+              src={entry.data.organizerImage.url}
+              alt={entry.data.organizerImage.alt}
+            />
+            <p class="ml-2">{entry.data.organizerName}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <article class="prose lg:prose-lg">
+      <slot />
+    </article>
+  </body>
+</html>

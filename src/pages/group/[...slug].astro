@@ -1,4 +1,5 @@
 ---
+import GroupLayout from "../../layouts/group.astro"
 import { getCollection } from "astro:content"
 
 export async function getStaticPaths() {
@@ -13,7 +14,6 @@ const { entry } = Astro.props
 const { Content } = await entry.render()
 ---
 
-<div>
-  <h1>{entry.data.name}</h1>
+<GroupLayout entry={entry}>
   <Content />
-</div>
+</GroupLayout>
