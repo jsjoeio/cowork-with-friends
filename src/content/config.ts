@@ -17,7 +17,7 @@ const groupsCollection = defineCollection({
     organizerEmail: z.string().email(), // The email of the organizer
     organizerImage: z.object({
       // Organizer's profile image
-      url: z.string().url(),
+      url: z.string(),
       alt: z.string(),
     }),
     joinGroupText: z.string(), // The text to display on the "Join Group" button
