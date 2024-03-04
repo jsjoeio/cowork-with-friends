@@ -52,7 +52,17 @@ const makeTitle = _title
   </head>
   <body class="bg-light-green px-6 py-6 xl:py-16">
     <div class="mx-auto">
-      <SmallLogoWithContainer />
+      <nav class="">
+        <div class="container mx-auto flex items-center justify-between">
+          <a href="/">
+            <img
+              class="w-24 h-24 xl:w-32 xl:h-32"
+              src="/assets/cwf-logo.svg"
+              alt="Cowork with friends logo with two emojis"
+            />
+          </a>
+        </div>
+      </nav>
       <slot />
     </div>
   </body>

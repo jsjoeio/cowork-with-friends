@@ -14,6 +14,6 @@ const { entry } = Astro.props
 const { Content } = await entry.render()
 ---
 
-<GroupLayout entry={entry}>
+<GroupLayout entry={entry} title={entry.data.name}>
   <Content />
 </GroupLayout>
