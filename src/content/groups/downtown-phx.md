@@ -1,8 +1,8 @@
 ---
 name: "Cowork With Friends Downtown Phoenix"
-description: "A group of tech professionals who get together for coworkin'"
+description: "A group of folks who get together for coworkin'"
 image:
-  url: "/assets/downtown-phx-group.png"
+  url: "/assets/downtown-phx-group.jpg"
   alt: "Group shot at McKinley Cub"
 acceptingMembers: true
 location: "Phoenix, AZ"

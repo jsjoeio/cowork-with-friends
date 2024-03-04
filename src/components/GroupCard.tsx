@@ -13,15 +13,15 @@ type GroupCardProps = {
 export function GroupCard(props: GroupCardProps) {
   return (
     <a href={`/group/${props.slug}`}>
-      <div className="p-4 rounded-[24px] hover:shadow-lg hover:bg-dark-orange flex flex-col items-stretch justify-center xl:flex-row">
-        <div id="group-card-left" className="mb-4 xl:mb-0">
+      <div className="p-4 rounded-[24px] hover:shadow-lg hover:bg-dark-orange flex flex-col justify-center xl:flex-row">
+        <div id="group-card-left" className="mb-4 xl:mb-0 xl:w-[400px]">
           <img
             className="mx-auto block max-w-[400px] rounded-[24px]"
             src={props.image.url}
             alt={props.image.alt}
           />
         </div>
-        <div id="group-card-right" className="ml-2">
+        <div id="group-card-right" className="ml-2 xl:w-[400px] px-4 py-1">
           {props.isNew && (
             <span className="font-semibold bg-pink rounded-[24px] px-2 py-1">
               New Group
