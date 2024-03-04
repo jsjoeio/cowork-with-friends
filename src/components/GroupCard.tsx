@@ -16,7 +16,7 @@ export function GroupCard(props: GroupCardProps) {
       <div className="p-4 rounded-[24px] hover:shadow-lg hover:bg-dark-orange flex flex-col items-stretch justify-center xl:flex-row">
         <div id="group-card-left" className="mb-4 xl:mb-0">
           <img
-            className="mx-auto block max-w-[200px] rounded-[24px]"
+            className="mx-auto block max-w-[400px] rounded-[24px]"
             src={props.image.url}
             alt={props.image.alt}
           />
@@ -27,9 +27,9 @@ export function GroupCard(props: GroupCardProps) {
               New Group
             </span>
           )}
-          <h2 className="my-2 font-bold text-xl">{props.name}</h2>
-          <p className="font-normal mt-4 uppercase text-sm">{props.location}</p>
-          <p>{props.description}</p>
+          <h2 className="my-2 font-bold text-2xl">{props.name}</h2>
+          <p className="font-normal mt-4 uppercase text-xl">{props.location}</p>
+          <p className="text-xl">{props.description}</p>
         </div>
       </div>
     </a>
