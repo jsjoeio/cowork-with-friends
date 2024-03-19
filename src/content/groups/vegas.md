@@ -12,7 +12,7 @@ organizerEmail: "hello@coworkwithfriends.com"
 organizerImage:
   url: "/assets/ugur-headshot.jpg"
   alt: "Headshot of Ugur Armagan"
-joinGroupText: "Join On Meetup"
+joinGroupText: "Join on Meetup"
 joinGroupUrl: "https://www.meetup.com/coworking-with-friends/"
 ---
 
