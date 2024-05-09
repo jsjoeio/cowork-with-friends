@@ -12,7 +12,7 @@ organizerEmail: "hello@coworkwithfriends.com"
 organizerImage:
   url: "/assets/luke-karrys.png"
   alt: "Headshot of Luke Karrys"
-joinGroupText: "Join on Group"
+joinGroupText: "Join Group"
 joinGroupUrl: "https://forms.reform.app/WR4x5f/cwf-signup-form/41rn5c?609b8384-27d1-4a6d-b52e-86598005565e=Downtown%20Mesa"
 ---
 
