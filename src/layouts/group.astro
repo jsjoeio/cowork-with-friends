@@ -1,6 +1,7 @@
 ---
 import { SEO } from "astro-seo"
 import { JoinGroup } from "../components/JoinGroup.tsx"
+import { UpcomingEvent } from "../components/UpcomingEvent.tsx"
 
 const { content, title = "", entry } = Astro.props
 
@@ -98,6 +99,16 @@ const makeTitle = _title
             text={entry.data.joinGroupText}
           />
         </div>
+        {entry.data.calendarId && (
+          <div class="mt-6">
+            <UpcomingEvent
+              calendarId={entry.data.calendarId}
+              apiKey={import.meta.env.PUBLIC_GOOGLE_CALENDAR_API_KEY}
+              groupName={entry.data.name}
+              client:load
+            />
+          </div>
+        )}
       </div>
     </div>
 
