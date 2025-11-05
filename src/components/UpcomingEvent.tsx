@@ -14,6 +14,9 @@ interface UpcomingEventProps {
   groupName?: string
 }
 
+// Default event title to filter out (avoid showing generic titles)
+const DEFAULT_EVENT_TITLE = 'Cowork with Friends'
+
 export function UpcomingEvent({
   calendarId,
   apiKey,
@@ -80,7 +83,7 @@ export function UpcomingEvent({
             </div>
           </div>
         )}
-        {event.summary && event.summary !== 'Cowork with Friends' && (
+        {event.summary && event.summary !== DEFAULT_EVENT_TITLE && (
           <div className="mt-2">
             <p className="text-sm text-gray-700">{event.summary}</p>
           </div>

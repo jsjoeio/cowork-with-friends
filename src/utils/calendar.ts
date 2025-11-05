@@ -32,12 +32,12 @@ export async function fetchNextEvent(
 ): Promise<CalendarEvent | null> {
   try {
     const now = new Date().toISOString()
-    const apiKeyParam = apiKey ? `&key=${apiKey}` : ''
+    const apiKeyParam = apiKey ? `&key=${encodeURIComponent(apiKey)}` : ''
     
     // Using Google Calendar API v3 to fetch public calendar events
     const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(
       calendarId
-    )}/events?timeMin=${now}&orderBy=startTime&singleEvents=true&maxResults=1${apiKeyParam}`
+    )}/events?timeMin=${encodeURIComponent(now)}&orderBy=startTime&singleEvents=true&maxResults=1${apiKeyParam}`
 
     const response = await fetch(url)
 
