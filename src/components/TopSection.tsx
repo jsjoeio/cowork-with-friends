@@ -25,7 +25,7 @@ function VisualSection() {
           <div className="flex flex-row items-center justify-center mt-6">
             <CalIcon />
             <div className="ml-2">
-              <p className="font-semibold">Wednesdays</p>
+              <p className="font-semibold">Once a month</p>
               <p>2-3hrs in the mornin'</p>
             </div>
           </div>

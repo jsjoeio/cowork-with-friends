@@ -24,7 +24,7 @@ Now we're a group of about 10-12 (mainly who work in tech) friends who meet each
 
 ## When We Meet
 
-Usually on Wednesdays for 2-3 hours (i.e. 9-11am) a few times per month.
+Usually on Wednesdays for 2-3 hours (i.e. 9-11am) once a month.
 
 ## Where We Meet
 
