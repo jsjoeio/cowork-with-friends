@@ -3,8 +3,14 @@ import { CalIcon } from "./CalIcon"
 import { Hero } from "./Hero"
 import { LogoWithContainer } from "./LogoWithContainer"
 import { MapIcon } from "./MapIcon"
+import { UpcomingEvent } from "./UpcomingEvent"
 
-function VisualSection() {
+interface VisualSectionProps {
+  calendarId?: string
+  apiKey?: string
+}
+
+function VisualSection({ calendarId, apiKey }: VisualSectionProps) {
   return (
     <div className="mb-[40px] flex flex-col justify-center items-center">
       <div>
@@ -38,6 +44,15 @@ function VisualSection() {
           </div>
         </div>
       </div>
+      {calendarId && (
+        <div className="mt-6 max-w-md mx-auto">
+          <UpcomingEvent
+            calendarId={calendarId}
+            apiKey={apiKey}
+            groupName="Scottsdale"
+          />
+        </div>
+      )}
     </div>
   )
 }
@@ -90,7 +105,12 @@ function SecondSection() {
   )
 }
 
-export function TopSection() {
+interface TopSectionProps {
+  calendarId?: string
+  apiKey?: string
+}
+
+export function TopSection({ calendarId, apiKey }: TopSectionProps) {
   return (
     <div className="grow">
       <main className="h-full flex flex-col">
@@ -99,7 +119,7 @@ export function TopSection() {
           <LogoWithContainer />
           <div className="grid grid-cols-1 xl:grid-cols-2">
             <Hero />
-            <VisualSection />
+            <VisualSection calendarId={calendarId} apiKey={apiKey} />
           </div>
         </div>
         <SecondSection />

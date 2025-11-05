@@ -5,6 +5,11 @@ import { MainContainer } from "../components/MainContainer.tsx"
 import { Footer } from "../components/Footer.tsx"
 import Layout from "../layouts/main.astro"
 
+// Scottsdale group calendar ID - this is displayed on the main page
+// Replace with your actual Google Calendar ID (e.g., "abc123@group.calendar.google.com")
+const scottsdaleCalendarId = "cwf-scottsdale@example.com"
+const apiKey = import.meta.env.PUBLIC_GOOGLE_CALENDAR_API_KEY
+
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
@@ -12,7 +17,7 @@ import Layout from "../layouts/main.astro"
 <Layout title="">
   <body>
     <MainContainer>
-      <TopSection />
+      <TopSection calendarId={scottsdaleCalendarId} apiKey={apiKey} client:load />
       <Footer />
     </MainContainer>
   </body>

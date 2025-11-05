@@ -22,6 +22,7 @@ const groupsCollection = defineCollection({
     }),
     joinGroupText: z.string(), // The text to display on the "Join Group" button
     joinGroupUrl: z.string().url(), // The URL to redirect to when the "Join Group" button is clicked
+    calendarId: z.string().optional(), // Google Calendar ID for fetching upcoming events
   }),
 })
 
